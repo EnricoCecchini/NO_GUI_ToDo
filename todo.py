@@ -36,10 +36,16 @@ def undoTodo(todos):
     except:
         print('That Todo is not in the list')
 
+def isDone(done):
+    if done == True:
+        return 'Done'
+    else:
+        return 'Not Done'
+
 def printTodos(todos):
     print('\nToDos:')
     for i in range(len(todos)):
-        print(f'#{i+1} - {todos[i].description} - {todos[i].done}')
+        print(f'#{i+1} - {todos[i].description} - {isDone(todos[i].done)}')
     
     print('')
     
